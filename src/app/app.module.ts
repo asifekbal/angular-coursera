@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { DishdetailComponent } from './dishdetail/dishdetail.component';
+import { DishService } from './services/dish.service';
 
 
 
@@ -22,10 +23,10 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
     DishdetailComponent
   ],
   imports: [
-    BrowserModule, BrowserAnimationsModule, MatToolbarModule, FlexLayoutModule, MatListModule,MatGridListModule,
-    MatCardModule,MatButtonModule
+    BrowserModule, BrowserAnimationsModule, MatToolbarModule, FlexLayoutModule, MatListModule, MatGridListModule,
+    MatCardModule, MatButtonModule
   ],
-  providers: [],
+  providers: [DishService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
