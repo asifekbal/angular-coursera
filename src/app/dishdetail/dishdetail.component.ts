@@ -11,25 +11,20 @@ import { Dish } from '../shared/dish';
 })
 export class DishdetailComponent implements OnInit {
 
-
     dish: Dish;
-
     constructor(
         private route: ActivatedRoute,
         private dishService: DishService,
         private location: Location,
-
     ) {
 
     }
 
     ngOnInit() {
         let id = this.route.snapshot.params['id'];
-        this.dish = this.dishService.getDish(id);
+        this.dishService.getDish(id).then((dish) => this.dish = dish);
     }
-
-    goBack(){
+    goBack() {
         this.location.back();
     }
-
 }

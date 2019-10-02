@@ -9,6 +9,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -30,7 +31,6 @@ import { LeaderService } from './services/leader.service';
 import { PromotionService } from './services/promotion.service';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -45,7 +45,8 @@ import { PromotionService } from './services/promotion.service';
   ],
   imports: [
     BrowserModule, BrowserAnimationsModule, MatToolbarModule, FlexLayoutModule, MatListModule, MatGridListModule,
-    MatCardModule, MatButtonModule, AppRoutingModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule, FormsModule, ReactiveFormsModule, MatSelectModule, MatSlideToggleModule
+    MatCardModule, MatButtonModule, AppRoutingModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule,
+    FormsModule, ReactiveFormsModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule
   ],
   providers: [DishService, PromotionService, LeaderService],
   entryComponents: [
