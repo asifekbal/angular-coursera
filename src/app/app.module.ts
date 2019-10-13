@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -30,6 +31,9 @@ import { MenuComponent } from './menu/menu.component';
 import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
 import { PromotionService } from './services/promotion.service';
+import { baseURL } from './shared/baseurl';
+
+
 
 
 @NgModule({
@@ -47,9 +51,9 @@ import { PromotionService } from './services/promotion.service';
   imports: [
     BrowserModule, BrowserAnimationsModule, MatToolbarModule, FlexLayoutModule, MatListModule, MatGridListModule,
     MatCardModule, MatButtonModule, AppRoutingModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule,
-    FormsModule, ReactiveFormsModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule, MatSliderModule
+    FormsModule, ReactiveFormsModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule, MatSliderModule, HttpClientModule
   ],
-  providers: [DishService, PromotionService, LeaderService],
+  providers: [DishService, PromotionService, LeaderService, { provide: 'BaseURL', useValue: baseURL }],
   entryComponents: [
     LoginComponent
   ],
