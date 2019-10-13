@@ -28,3 +28,10 @@ body {
 .flex-spacer {
   flex: 1 1 auto;
 }
+
+.highlight {
+  background-color: #512da8;
+  border: 1px solid #ffc107 ;
+  z-index: 1;
+  transform: scale(1.01);
+}
