@@ -32,6 +32,7 @@ import { DishService } from './services/dish.service';
 import { LeaderService } from './services/leader.service';
 import { PromotionService } from './services/promotion.service';
 import { baseURL } from './shared/baseurl';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 
 
 
@@ -53,7 +54,7 @@ import { baseURL } from './shared/baseurl';
     MatCardModule, MatButtonModule, AppRoutingModule, MatDialogModule, MatFormFieldModule, MatInputModule, MatCheckboxModule,
     FormsModule, ReactiveFormsModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule, MatSliderModule, HttpClientModule
   ],
-  providers: [DishService, PromotionService, LeaderService, { provide: 'BaseURL', useValue: baseURL }],
+  providers: [DishService, PromotionService, LeaderService, ProcessHTTPMsgService, { provide: 'BaseURL', useValue: baseURL }],
   entryComponents: [
     LoginComponent
   ],
