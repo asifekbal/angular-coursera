@@ -1,5 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import { flyInOut, expand } from '../animations/app.animation';
+import { expand, flyInOut } from '../animations/app.animation';
 import { DishService } from '../services/dish.service';
 import { LeaderService } from '../services/leader.service';
 import { PromotionService } from '../services/promotion.service';
@@ -33,7 +33,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.dishService.getFeaturedDish().subscribe((dishes) => this.dish = dishes, errmess => this.dishErrMess = <any>errmess);
-    this.promotionService.getFeaturedPromotion().subscribe((promotion) => this.promotion = promotion);
-    this.leaderService.getFeaturedLeader().subscribe((leader) => this.leader = leader);
+    this.promotionService.getFeaturedPromotion().subscribe((promotions) => this.promotion = promotions, errmess => this.dishErrMess = <any>errmess);
+    this.leaderService.getFeaturedLeader().subscribe((leaders) => this.leader = leaders, errmess => this.dishErrMess = <any>errmess);
   }
 }
